@@ -1,0 +1,70 @@
+body {
+    background-image: url(images/stars.jpg);
+    color: white;
+    font-family: "Quicksand", sans-serif;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    justify-content: right;
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cont-logo {
+    padding: 20px;
+    width: 120px;
+}
+
+.cont-logo img {
+    width: 100%;
+}
+
+.naveg li {
+    display: inline;
+    margin-left: 30px;
+    margin-right: 40px;
+}
+
+.planetimg {
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.planetimg img {
+    width: 100%;
+
+}
+.info {
+    display: flex;
+    margin-top: 30px;   
+}
+.solar-sist {
+    width: 500px;
+}
+.solar-sist img {
+    width: 100%;
+}
+.intro-text {
+    width: 600px;
+    margin-left: 50px;
+}
+.intro-text h2 {
+    margin-top: 30px;
+}
+.intro-text p {
+    margin-top: 15px;
+}
+.redirec li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
