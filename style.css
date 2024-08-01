@@ -1,11 +1,58 @@
+@media only screen and (min-width: 1200px) {
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 120px;
+        grid-template-areas:
+            "imagen nada video"
+            "texto nada2 texto2";
+    }
+
+    .first-item {
+        grid-area: imagen;
+        width: auto;
+        height: auto;
+    }
+
+    .second-item {
+        grid-area: nada;
+    }
+
+    .third-item {
+        grid-area: video;
+    }
+
+    .fourth-item {
+        grid-area: texto;
+    }
+
+    .fifth-item {
+        grid-area: nada2;
+    }
+
+    .sixth-item {
+        grid-area: texto2;
+    }
+
+    .first-item img {
+        width: 100%;
+        height: 100%;
+    }
+    .video-trailer iframe {
+        width: 650px;
+        height: 434px;
+    }
+}
+
 .allin {
     background-image: url(images/stars.jpg);
     color: white;
     font-family: "Quicksand", sans-serif;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-
-h1 {
+.title-princp {
     display: flex;
     justify-content: center;
 }
@@ -32,15 +79,12 @@ footer {
     margin-right: 40px;
 }
 
-.container-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 120px;
-}
 
-.first-item img {
-    width: 100%;
-    height: 100%;
+
+.redirec li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
 
 .intro-text {
@@ -59,10 +103,155 @@ footer {
 .intro-text p {
     margin-top: 15px;
 }
+@media only screen and (max-width: 1200px) {
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 100%);
+        grid-template-rows: 0,5fr 0 500px 0,5fr 0 0,5fr;
+        margin: 0;
+        grid-template-areas:
+            "imagen"
+            "texto"
+            "nada"
+            "video"
+            "texto2"
+            "nada2";
+    }
+    .video-trailer {
+        width: 800px;
+        height: 680px;
+        margin-left: 50px;
+    }
+     .video-trailer iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-item {
+        width: 90%;
+    }
+
+    .intro-text h2 {
+        margin-top: 30px;
+        font-size: 16px;
+    }
 
 
-.redirec li a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
+    .intro-text p {
+        margin-top: 10px;
+        font-size: 10px;
+        margin-right: 50px;
+    }
+
+    .title-princp {
+        display: flex;
+        justify-content: center;
+    }
+
+    .first-item {
+        grid-area: imagen;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .second-item {
+        grid-area: nada;
+    }
+
+    .third-item {
+        grid-area: video;
+    }
+
+    .fourth-item {
+        grid-area: texto;
+    }
+
+    .fifth-item {
+        grid-area: nada2;
+    }
+
+    .sixth-item {
+        grid-area: texto2;
+    }
+
+    .first-item img {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 720px) {
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 100%);
+        margin: 0;
+        grid-template-areas:
+            "imagen"
+            "texto"
+            "nada"
+            "video"
+            "texto2"
+            "nada2";
+    }
+    .video-trailer {
+        width: 187px;
+        height: 338px;
+        margin-left: 20px;
+    }
+     .video-trailer iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-item {
+        width: 90%;
+    }
+
+    .intro-text h2 {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+
+    .intro-text p {
+        margin-top: 10px;
+        font-size: 10px;
+        margin-right: 50px;
+    }
+
+    .title-princp {
+        display: flex;
+        justify-content: center;
+    }
+
+    .first-item {
+        grid-area: imagen;
+        width: auto;
+        height: auto;
+    }
+
+    .second-item {
+        grid-area: nada;
+    }
+
+    .third-item {
+        grid-area: video;
+    }
+
+    .fourth-item {
+        grid-area: texto;
+    }
+
+    .fifth-item {
+        grid-area: nada2;
+    }
+
+    .sixth-item {
+        grid-area: texto2;
+    }
+
+    .first-item img {
+        width: 100%;
+        height: 100%;
+    }
 }
