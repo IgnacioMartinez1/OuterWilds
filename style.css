@@ -154,6 +154,108 @@
         width: 100%;
         margin-left: 150px;
     }
+
+    /*Characters*/
+    .grid-container-characters {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "character-one character-one-text"
+            "character-two character-two-text"
+            "character-three character-three-text"
+            "character-four character-four-text"
+            "character-five character-five-text"
+        ;
+        align-content: center;
+    }
+
+    .character-one {
+        grid-area: character-one;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .character-one img {
+        width: 100%;
+    }
+
+    .character-two {
+        grid-area: character-two;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .character-two img {
+        width: 100%;
+    }
+
+    .character-three {
+        grid-area: character-three;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .character-three img {
+        width: 100%;
+    }
+
+    .character-four {
+        grid-area: character-four;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+
+    }
+
+    .character-four img {
+        width: 100%;
+    }
+
+    .character-five {
+        grid-area: character-five;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+
+    }
+
+    .character-five img {
+        width: 100%;
+    }
+
+    .character-one-text {
+        grid-area: character-one-text;
+        margin: 40px 80px 0px 0px;
+    }
+
+    .character-two-text {
+        grid-area: character-two-text;
+        margin: 40px 80px 0px 0px;
+    }
+
+    .character-three-text {
+        grid-area: character-three-text;
+        margin: 40px 40px 0px 0px;
+    }
+
+    .character-four-text {
+        grid-area: character-four-text;
+        margin: 40px 80px 0px 0px;
+    }
+
+    .character-five-text {
+        grid-area: character-five-text;
+        margin: 40px 80px 0px 0px;
+    }
 }
 
 .allin {
@@ -415,6 +517,136 @@ footer {
     .planet-image-six img {
         width: 100%;
     }
+
+    .grid-container-characters {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "character-one character-one-text"
+            "character-two character-two-text"
+            "character-three character-three-text"
+            "character-four character-four-text"
+            "character-five character-five-text"
+        ;
+        align-content: center;
+    }
+
+    .character-one {
+        grid-area: character-one;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .character-one img {
+        width: 100%;
+    }
+
+    .character-two {
+        grid-area: character-two;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .character-two img {
+        width: 100%;
+    }
+
+    .character-three {
+        grid-area: character-three;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .character-three img {
+        width: 100%;
+    }
+
+    .character-four {
+        grid-area: character-four;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+
+    }
+
+    .character-four img {
+        width: 100%;
+    }
+
+    .character-five {
+        grid-area: character-five;
+        width: 200px;
+        margin-right: 50px;
+        margin-top: 40px;
+        margin-left: 20px;
+
+    }
+
+    .character-five img {
+        width: 100%;
+    }
+
+    .character-one-text {
+        grid-area: character-one-text;
+        margin: 40px 80px 0px 0px;
+    }
+
+    .character-two-text {
+        grid-area: character-two-text;
+        margin: 40px 80px 0px 0px;
+    }
+
+    .character-three-text {
+        grid-area: character-three-text;
+        margin: 40px 40px 0px 0px;
+    }
+
+    .character-four-text {
+        grid-area: character-four-text;
+        margin: 40px 80px 0px 0px;
+    }
+
+    .character-five-text {
+        grid-area: character-five-text;
+        margin: 40px 80px 0px 0px;
+    }
+
+    .character-five img {
+        width: 100%;
+    }
+
+    .character-one-text {
+        grid-area: character-one-text;
+        margin: 40px auto 0px auto;
+    }
+
+    .character-two-text {
+        grid-area: character-two-text;
+        margin: 40px auto 0px auto;
+    }
+
+    .character-three-text {
+        grid-area: character-three-text;
+        margin: 40px auto 0px auto;
+    }
+
+    .character-four-text {
+        grid-area: character-four-text;
+        margin: 40px auto 0px auto;
+    }
+
+    .character-five-text {
+        grid-area: character-five-text;
+        margin: 40px auto 0px auto;
+    }
 }
 
 @media only screen and (max-width: 720px) {
@@ -493,8 +725,9 @@ footer {
         width: 100%;
         height: 100%;
     }
-     /*Planets*/
-     .grid-container-planets {
+
+    /*Planets*/
+    .grid-container-planets {
         display: grid;
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(12, auto);
@@ -616,5 +849,102 @@ footer {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /*Characters*/
+    .grid-container-characters {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "character-one"
+            "character-one-text"
+            "character-two"
+            "character-two-text"
+            "character-three"
+            "character-three-text"
+            "character-four"
+            "character-four-text"
+            "character-five"
+            "character-five-text"
+        ;
+        align-content: center;
+    }
+
+    .character-one {
+        grid-area: character-one;
+        width: 200px;
+        margin: auto;
+    }
+
+    .character-one img {
+        width: 100%;
+    }
+
+    .character-two {
+        grid-area: character-two;
+        width: 200px;
+        margin: auto;
+    }
+
+    .character-two img {
+        width: 100%;
+    }
+
+    .character-three {
+        grid-area: character-three;
+        width: 200px;
+        margin: auto;
+    }
+
+    .character-three img {
+        width: 100%;
+    }
+
+    .character-four {
+        grid-area: character-four;
+        width: 200px;
+        margin: auto;
+
+    }
+
+    .character-four img {
+        width: 100%;
+    }
+
+    .character-five {
+        grid-area: character-five;
+        width: 200px;
+        margin: auto;
+
+    }
+
+    .character-five img {
+        width: 100%;
+    }
+
+    .character-one-text {
+        grid-area: character-one-text;
+        margin: 40px auto 0px auto;
+    }
+
+    .character-two-text {
+        grid-area: character-two-text;
+        margin: 40px auto 0px auto;
+    }
+
+    .character-three-text {
+        grid-area: character-three-text;
+        margin: 40px auto 0px auto;
+    }
+
+    .character-four-text {
+        grid-area: character-four-text;
+        margin: 40px auto 0px auto;
+    }
+
+    .character-five-text {
+        grid-area: character-five-text;
+        margin: 40px auto 0px auto;
     }
 }
