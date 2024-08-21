@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <!--Fuentes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,23 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <!--Animacion-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
   <div class="allin">
     <header>
+      <div class="system">
+        <div class="solar-system">
+          <div class="planet shiny-star3">
+            <img src="./images/pngtree-yellow-shining-star-vector-png-image_9213268.png" alt="estrellitas">
+          </div>
+          <div class="planet shiny-star4">
+            <img src="./images/pngtree-yellow-shining-star-vector-png-image_9213268.png" alt="estrellitas">
+          </div>
+        </div>
+      </div>
       <section>
         <nav class="navbar navbar-expand-lg d-flex justify-content-center">
           <div class="container-fluid">
@@ -41,9 +53,6 @@
                 <li class="nav-item">
                   <a class="nav-link text-white" href="./pages/planets.html">Sistema Solar</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled text-white" aria-disabled="true">Mecanicas</a>
-                </li>
               </ul>
             </div>
           </div>
@@ -54,7 +63,7 @@
         <img src="./images/hr_preview_rev_1.png" alt="hr">
       </div>
       <div class="title-princp">
-      <h2>Descubri los misterios del Universo</h2>
+        <h2>Descubri los misterios del Universo</h2>
       </div>
       <section class="container-grid ">
         <div class="grid-item first-item">
@@ -63,10 +72,20 @@
         <div class="grid-item second-item">
         </div>
         <div class="grid-item third-item video-trailer">
-          <iframe  src="https://www.youtube.com/embed/d6LGnVCL1_A?si=zqpeEE8UAYJiVUez"
-            title="YouTube video player" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/d6LGnVCL1_A?si=zqpeEE8UAYJiVUez" title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="system">
+          <div class="solar-system">
+            <div class="planet shiny-star">
+              <img src="./images/pngtree-yellow-shining-star-vector-png-image_9213268.png" alt="estrellitas">
+            </div>
+            <div class="planet shiny-star2">
+              <img src="./images/pngtree-yellow-shining-star-vector-png-image_9213268.png" alt="estrellitas">
+            </div>
+          </div>
         </div>
         <div class="grid-item intro-text fourth-item">
           <h2>Bienvenido al Programa Espacial</h2>
@@ -129,9 +148,9 @@
           </div>
         </div>
       </div>
-        <div class="d-flex justify-content-end">
-          <img src="images/planet.jpg" alt="Timberhearth">
-        </div>
+      <div class="d-flex justify-content-end">
+        <img src="images/planet.jpg" alt="Timberhearth">
+      </div>
     </footer>
   </div>
 </body>

@@ -1,0 +1,575 @@
+@import './mixin';
+@import './variables';
+
+.allin {
+    @include Allin
+}
+
+.title-princp {
+    display: flex;
+    justify-content: center;
+}
+
+.cont-logo {
+    width: $font-size-xlarge;
+
+    img {
+        width: 100%;
+    }
+}
+
+.naveg {
+    li {
+        display: inline;
+        margin-left: $margin-small;
+        margin-right: $margin-small;
+    }
+}
+
+.redirec {
+    li {
+        a {
+            text-decoration: none;
+            color: $color-white;
+            font-size: $font-size-medium;
+        }
+    }
+}
+
+.intro-text {
+    width: 600px;
+    margin-left: $margin-default;
+    font-size: $font-size-medium;
+
+    h2 {
+        margin-top: $margin-small;
+        font-size: $font-size-large;
+    }
+
+    p {
+        margin-top: 15px;
+    }
+}
+
+.system {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.solar-system {
+    position: relative;
+    z-index: 2;
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: -50px;
+}
+
+.shiny-star {
+    width: 30px;
+    height: 30px;
+    animation: orbit 40s linear infinite;
+}
+
+.shiny-star img {
+    width: 100%;
+}
+
+.shiny-star2 {
+    width: 30px;
+    height: 30px;
+    animation: orbit2 50s linear infinite;
+}
+
+.shiny-star2 img {
+    width: 100%;
+}
+
+.shiny-star3 {
+    width: 30px;
+    height: 30px;
+    animation: orbit3 50s linear infinite;
+}
+
+.shiny-star3 img {
+    width: 100%;
+}
+
+.shiny-star4 {
+    width: 30px;
+    height: 30px;
+    animation: orbit4 50s linear infinite;
+}
+
+.shiny-star4 img {
+    width: 100%;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(-360deg) translateX(500px) rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(100px) rotate(360deg);
+    }
+}
+
+@keyframes orbit2 {
+    0% {
+        transform: rotate(360deg) translateX(500px) rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+@keyframes orbit3 {
+    0% {
+        transform: rotate(360deg) translateX(500px) rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+@keyframes orbit4 {
+    0% {
+        transform: rotate(-360deg) translateX(500px) rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(100px) rotate(360deg);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container-grid {
+        @include grid_layout (3, 1fr, 120px);
+        grid-template-areas:
+            "imagen nada video"
+            "texto nada2 texto2";
+
+    }
+
+    .video-trailer {
+
+        iframe {
+            @include video-size ($width-video-large, $height-video-small)
+        }
+    }
+
+    @each $class, $area in $items {
+        .#{$class} {
+            grid-area: #{$area};
+
+            @if $class ==first-item {
+                width: auto;
+                height: auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .video-trailer {
+        iframe {
+            width: $width-video-large;
+            height: $height-video-small;
+        }
+    }
+
+    /*Planets*/
+    .grid-container-planets {
+
+        @include grid_layout(2, 1fr, 50px);
+        grid-template-rows: repeat(12, auto);
+        grid-template-areas:
+            "text-one image-one"
+            "image-two text-two"
+            "text-three image-three"
+            "image-four text-four "
+            "text-five image-five "
+            "image-six text-six";
+
+        align-items: center;
+    }
+
+    @each $class, $props in $planet-texts {
+        .#{$class} {
+            grid-area: map-get($props, area);
+            margin: map-get($props, margin);
+        }
+    }
+
+    @each $class, $props in $planet-images {
+        .#{$class} {
+            grid-area: map-get($props, area);
+            width: map-get($props, width);
+
+            @if map-get($props, margin-left) {
+                margin-left: map-get($props, margin-left);
+            }
+
+            @if map-get($props, margin-left) {
+                margin-left: map-get($props, margin-left);
+            }
+
+            @if map-get($props, margin-top) {
+                margin-top: map-get($props, margin-top);
+            }
+
+            img {
+                width: 100%;
+                margin-left: map-get($props, margin-left);
+            }
+        }
+    }
+
+    /*Characters*/
+
+    .grid-container-characters {
+        @include grid_layout(2, auto, 0);
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "character-one character-one-text"
+            "character-two character-two-text"
+            "character-three character-three-text"
+            "character-four character-four-text"
+            "character-five character-five-text";
+        align-content: center;
+    }
+
+    @each $name, $area in $characters {
+        .#{$name} {
+            grid-area: $area;
+            width: 200px;
+            margin-right: 50px;
+            margin-top: 40px;
+            margin-left: 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @each $text-name, $text-area in $character-texts {
+        .#{$text-name} {
+            grid-area: $text-area;
+            margin: 40px 80px 0px 0px;
+        }
+    }
+
+    @each $text-name, $text-area in $character-texts {
+        .#{$text-name} {
+            grid-area: $text-area;
+            margin: 40px 80px 0px 0px;
+        }
+    }
+
+}
+
+@include responsive (1200px) {
+    .container-grid {
+        @include grid_layout(6, 100%, 0);
+        grid-template-rows: 0.5fr 0 500px 0.5fr 0 0.5fr;
+        grid-template-areas:
+            "imagen"
+            "texto"
+            "nada"
+            "video"
+            "texto2"
+            "nada2";
+    }
+
+    .grid-item {
+        width: 90%;
+    }
+
+    @each $name, $area in $items {
+        .#{$name} {
+            grid-area: $area;
+
+            @if $name =='first-item' {
+                width: 100%;
+                height: auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .video-trailer {
+        width: $width-video-small;
+        height: $height-video-large;
+        margin-left: 50px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .intro-text {
+        h2 {
+            margin-top: 30px;
+            font-size: $font-size-small;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: $font-size-xsmall;
+            margin-right: 50px;
+        }
+    }
+
+    .title-princp {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Planets */
+    .grid-container-planets {
+        @include grid_layout(1, 1fr, 50px);
+        grid-template-rows: repeat(12, auto);
+        grid-template-areas:
+            "image-one"
+            "text-one"
+            "image-two"
+            "text-two"
+            "image-three"
+            "text-three"
+            "image-four"
+            "text-four"
+            "image-five"
+            "text-five"
+            "image-six"
+            "text-six";
+        align-items: center;
+    }
+
+    @each $key, $value in $planet-texts-mqtwo {
+        .#{$key} {
+            grid-area: map-get($value, area);
+            margin: map-get($value, margin);
+        }
+    }
+
+    @each $key, $value in $planet-images-mqtwo {
+        .#{$key} {
+            grid-area: map-get($value, area);
+            width: map-get($value, width);
+            margin-left: map-get($value, margin-left);
+            margin-right: auto;
+
+            @if map-get($value, margin-top) !=null {
+                margin-top: map-get($value, margin-top);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    /* Characters */
+    .grid-container-characters {
+        @include grid_layout(2, 1fr, 0);
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "character-one character-one-text"
+            "character-two character-two-text"
+            "character-three character-three-text"
+            "character-four character-four-text"
+            "character-five character-five-text";
+        align-content: center;
+    }
+
+    @each $key, $name in $characters-mqtwo {
+        .#{$name} {
+            grid-area: #{$name};
+
+            @each $property, $value in $character-common-styles {
+                #{$property}: #{$value};
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @each $key, $name in $character-texts-mqtwo {
+        .#{$name} {
+            grid-area: #{$name};
+
+            @if $key ==three-text {
+                margin: 40px auto 0px auto;
+            }
+
+            @else {
+                margin: map-get($character-text-margins, $key);
+            }
+        }
+    }
+}
+
+@include responsive (720px) {
+    .container-grid {
+        @include grid_layout(6, 100%, 0px);
+        grid-template-areas:
+            "imagen"
+            "texto"
+            "nada"
+            "video"
+            "texto2"
+            "nada2";
+    }
+
+    .grid-item {
+        width: 90%;
+    }
+
+    @each $name, $area in $items {
+        .#{$name} {
+            grid-area: $area;
+
+            @if $name =='first-item' {
+                width: auto;
+                height: auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+
+    .video-trailer {
+        width: 187px;
+        height: 338px;
+        margin-left: 20px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+
+    .intro-text {
+        h2 {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 10px;
+            margin-right: 50px;
+        }
+    }
+
+    .title-princp {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /*Planets */
+    .grid-container-planets {
+        @include grid_layout(1, 1fr, 0);
+        grid-template-rows: repeat(12, auto);
+        grid-template-areas:
+            "image-one"
+            "text-one"
+            "image-two"
+            "text-two"
+            "image-three"
+            "text-three"
+            "image-four"
+            "text-four"
+            "image-five"
+            "text-five"
+            "image-six"
+            "text-six";
+        align-items: center;
+    }
+
+    @each $name, $area in $planet-texts-mqthree {
+        .planet-#{$name} {
+            grid-area: #{$area};
+            margin-left: $margin-left;
+            margin-right: $margin-right;
+        }
+    }
+
+    @each $name, $area in $planet-images-mqthree {
+        .planet-#{$name} {
+            grid-area: $area;
+            width: $image-width;
+            margin-left: auto;
+            margin-right: auto;
+
+            img {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    /*Characters */
+    .grid-container-characters {
+        @include grid_layout(1, auto);
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "character-one"
+            "character-one-text"
+            "character-two"
+            "character-two-text"
+            "character-three"
+            "character-three-text"
+            "character-four"
+            "character-four-text"
+            "character-five"
+            "character-five-text";
+        align-content: center;
+    }
+
+    @each $character in $characters-mqthree {
+        .#{$character} {
+            grid-area: #{$character};
+            width: $character-width;
+            margin: $margin-auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @each $name-text, $area-text in $character-texts {
+        .#{$name-text} {
+            grid-area: $area-text;
+            margin: 40px auto 0 auto;
+        }
+    }
+
+}

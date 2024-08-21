@@ -3,15 +3,23 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin: 120px;
-        grid-template-areas:
-            "imagen nada video"
-            "texto nada2 texto2";
+        grid-template-areas: "imagen nada video" "texto nada2 texto2";
+    }
+
+    .video-trailer iframe {
+        width: 650px;
+        height: 434px;
     }
 
     .first-item {
         grid-area: imagen;
         width: auto;
         height: auto;
+    }
+
+    .first-item img {
+        width: 100%;
+        height: 100%;
     }
 
     .second-item {
@@ -32,11 +40,6 @@
 
     .sixth-item {
         grid-area: texto2;
-    }
-
-    .first-item img {
-        width: 100%;
-        height: 100%;
     }
 
     .video-trailer iframe {
@@ -256,10 +259,110 @@
         grid-area: character-five-text;
         margin: 40px 80px 0px 0px;
     }
+
 }
 
+.system {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.solar-system {
+    position: relative;
+    z-index: 2;
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: -50px;
+}
+
+.shiny-star {
+    width: 30px;
+    height: 30px;
+    animation: orbit 40s linear infinite;
+}
+
+.shiny-star img {
+    width: 100%;
+}
+
+.shiny-star2 {
+    width: 30px;
+    height: 30px;
+    animation: orbit2 50s linear infinite;
+}
+
+.shiny-star2 img {
+    width: 100%;
+}
+
+.shiny-star3 {
+    width: 30px;
+    height: 30px;
+    animation: orbit3 50s linear infinite;
+}
+
+.shiny-star3 img {
+    width: 100%;
+}
+
+.shiny-star4 {
+    width: 30px;
+    height: 30px;
+    animation: orbit4 50s linear infinite;
+}
+
+.shiny-star4 img {
+    width: 100%;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(-280deg) translateX(500px) rotate(-350deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(100px) rotate(360deg);
+    }
+}
+
+@keyframes orbit2 {
+    0% {
+        transform: rotate(360deg) translateX(500px) rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+@keyframes orbit3 {
+    0% {
+        transform: rotate(320deg) translateX(500px) rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+@keyframes orbit4 {
+    0% {
+        transform: rotate(-350deg) translateX(500px) rotate(-160deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(100px) rotate(360deg);
+    }
+}
+
+
 .allin {
-    background-image: url(images/stars.jpg);
+    background-image: url(../images/stars.jpg);
     color: white;
     font-family: "Quicksand", sans-serif;
     width: 100%;
@@ -271,12 +374,6 @@
     display: flex;
     justify-content: center;
 }
-
-
-footer {
-    justify-content: right;
-}
-
 
 .cont-logo {
     width: 100px;
@@ -324,54 +421,24 @@ footer {
     .container-grid {
         display: grid;
         grid-template-columns: repeat(6, 100%);
-        grid-template-rows: 0, 5fr 0 500px 0, 5fr 0 0, 5fr;
         margin: 0;
-        grid-template-areas:
-            "imagen"
-            "texto"
-            "nada"
-            "video"
-            "texto2"
-            "nada2";
-    }
-
-    .video-trailer {
-        width: 800px;
-        height: 680px;
-        margin-left: 50px;
-    }
-
-    .video-trailer iframe {
-        width: 100%;
-        height: 100%;
+        grid-template-rows: 0.5fr 0 500px 0.5fr 0 0.5fr;
+        grid-template-areas: "imagen" "texto" "nada" "video" "texto2" "nada2";
     }
 
     .grid-item {
         width: 90%;
     }
 
-    .intro-text h2 {
-        margin-top: 30px;
-        font-size: 16px;
-    }
-
-
-    .intro-text p {
-        margin-top: 10px;
-        font-size: 10px;
-        margin-right: 50px;
-    }
-
-    .title-princp {
-        display: flex;
-        justify-content: center;
-    }
-
     .first-item {
         grid-area: imagen;
         width: 100%;
         height: auto;
+    }
 
+    .first-item img {
+        width: 100%;
+        height: 100%;
     }
 
     .second-item {
@@ -394,9 +461,31 @@ footer {
         grid-area: texto2;
     }
 
-    .first-item img {
+    .video-trailer {
+        width: 800px;
+        height: 680px;
+        margin-left: 50px;
+    }
+
+    .video-trailer iframe {
         width: 100%;
         height: 100%;
+    }
+
+    .intro-text h2 {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    .intro-text p {
+        margin-top: 10px;
+        font-size: 10px;
+        margin-right: 50px;
+    }
+
+    .title-princp {
+        display: flex;
+        justify-content: center;
     }
 
     /*Planets*/
@@ -520,7 +609,7 @@ footer {
 
     .grid-container-characters {
         display: grid;
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(10, auto);
         grid-template-areas:
             "character-one character-one-text"
@@ -653,14 +742,8 @@ footer {
     .container-grid {
         display: grid;
         grid-template-columns: repeat(6, 100%);
-        margin: 0;
-        grid-template-areas:
-            "imagen"
-            "texto"
-            "nada"
-            "video"
-            "texto2"
-            "nada2";
+        margin: 0px;
+        grid-template-areas: "imagen" "texto" "nada" "video" "texto2" "nada2";
     }
 
     .video-trailer {
@@ -683,7 +766,6 @@ footer {
         font-size: 16px;
     }
 
-
     .intro-text p {
         margin-top: 10px;
         font-size: 10px;
@@ -699,6 +781,11 @@ footer {
         grid-area: imagen;
         width: auto;
         height: auto;
+    }
+
+    .first-item img {
+        width: 100%;
+        height: 100%;
     }
 
     .second-item {
@@ -721,15 +808,10 @@ footer {
         grid-area: texto2;
     }
 
-    .first-item img {
-        width: 100%;
-        height: 100%;
-    }
-
     /*Planets*/
     .grid-container-planets {
         display: grid;
-        grid-template-columns: repeat(1, 100%);
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(12, auto);
         grid-template-areas:
             "image-one"
@@ -794,6 +876,8 @@ footer {
 
     .planet-image-one img {
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .planet-image-two {
@@ -805,6 +889,8 @@ footer {
 
     .planet-image-two img {
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .planet-image-three {

@@ -1,0 +1,833 @@
+.allin {
+  background-image: url(../images/stars.jpg);
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.title-princp {
+  display: flex;
+  justify-content: center;
+}
+
+.cont-logo {
+  width: 100px;
+}
+.cont-logo img {
+  width: 100%;
+}
+
+.naveg li {
+  display: inline;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.redirec li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.intro-text {
+  width: 600px;
+  margin-left: 50px;
+  font-size: 20px;
+}
+.intro-text h2 {
+  margin-top: 30px;
+  font-size: 40px;
+}
+.intro-text p {
+  margin-top: 15px;
+}
+
+.system {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.solar-system {
+  position: relative;
+  z-index: 2;
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: -50px;
+}
+
+.shiny-star {
+  width: 30px;
+  height: 30px;
+  animation: orbit 40s linear infinite;
+}
+
+.shiny-star img {
+  width: 100%;
+}
+
+.shiny-star2 {
+  width: 30px;
+  height: 30px;
+  animation: orbit2 50s linear infinite;
+}
+
+.shiny-star2 img {
+  width: 100%;
+}
+
+.shiny-star3 {
+  width: 30px;
+  height: 30px;
+  animation: orbit3 50s linear infinite;
+}
+
+.shiny-star3 img {
+  width: 100%;
+}
+
+.shiny-star4 {
+  width: 30px;
+  height: 30px;
+  animation: orbit4 50s linear infinite;
+}
+
+.shiny-star4 img {
+  width: 100%;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(-360deg) translateX(500px) rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(360deg);
+  }
+}
+@keyframes orbit2 {
+  0% {
+    transform: rotate(360deg) translateX(500px) rotate(360deg);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(100px) rotate(-360deg);
+  }
+}
+@keyframes orbit3 {
+  0% {
+    transform: rotate(360deg) translateX(500px) rotate(360deg);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(100px) rotate(-360deg);
+  }
+}
+@keyframes orbit4 {
+  0% {
+    transform: rotate(-360deg) translateX(500px) rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(360deg);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 120px;
+    grid-template-areas: "imagen nada video" "texto nada2 texto2";
+  }
+  .video-trailer iframe {
+    width: 650px;
+    height: 434px;
+  }
+  .first-item {
+    grid-area: imagen;
+    width: auto;
+    height: auto;
+  }
+  .first-item img {
+    width: 100%;
+    height: 100%;
+  }
+  .second-item {
+    grid-area: nada;
+  }
+  .third-item {
+    grid-area: video;
+  }
+  .fourth-item {
+    grid-area: texto;
+  }
+  .fifth-item {
+    grid-area: nada2;
+  }
+  .sixth-item {
+    grid-area: texto2;
+  }
+  .video-trailer iframe {
+    width: 650px;
+    height: 434px;
+  }
+  /*Planets*/
+  .grid-container-planets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px;
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas: "text-one image-one" "image-two text-two" "text-three image-three" "image-four text-four " "text-five image-five " "image-six text-six";
+    align-items: center;
+  }
+  .planet-text-one {
+    grid-area: text-one;
+    margin: 0px 80px 0px 80px;
+  }
+  .planet-text-two {
+    grid-area: text-two;
+    margin: 0px 80px 0px 80px;
+  }
+  .planet-text-three {
+    grid-area: text-three;
+    margin: 100px 80px 0px 80px;
+  }
+  .planet-text-four {
+    grid-area: text-four;
+    margin: 100px 80px 0px 80px;
+  }
+  .planet-text-five {
+    grid-area: text-five;
+    margin: 100px 80px 0px 80px;
+  }
+  .planet-text-six {
+    grid-area: text-six;
+    margin: 100px 80px 0px 80px;
+  }
+  .planet-image-one {
+    grid-area: image-one;
+    width: 350px;
+    margin-left: 150px;
+    margin-left: 150px;
+  }
+  .planet-image-one img {
+    width: 100%;
+    margin-left: 150px;
+  }
+  .planet-image-two {
+    grid-area: image-two;
+    width: 350px;
+    margin-left: 150px;
+    margin-left: 150px;
+  }
+  .planet-image-two img {
+    width: 100%;
+    margin-left: 150px;
+  }
+  .planet-image-three {
+    grid-area: image-three;
+    width: 350px;
+    margin-left: 150px;
+    margin-left: 150px;
+    margin-top: 100px;
+  }
+  .planet-image-three img {
+    width: 100%;
+    margin-left: 150px;
+  }
+  .planet-image-four {
+    grid-area: image-four;
+    width: 350px;
+    margin-left: 150px;
+    margin-left: 150px;
+    margin-top: 100px;
+  }
+  .planet-image-four img {
+    width: 100%;
+    margin-left: 150px;
+  }
+  .planet-image-five {
+    grid-area: image-five;
+    width: 350px;
+    margin-left: 150px;
+    margin-left: 150px;
+    margin-top: 100px;
+  }
+  .planet-image-five img {
+    width: 100%;
+    margin-left: 150px;
+  }
+  .planet-image-six {
+    grid-area: image-six;
+    width: 350px;
+    margin-left: 150px;
+    margin-left: 150px;
+    margin-top: 100px;
+  }
+  .planet-image-six img {
+    width: 100%;
+    margin-left: 150px;
+  }
+  /*Characters*/
+  .grid-container-characters {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 0;
+    grid-template-rows: repeat(10, auto);
+    grid-template-areas: "character-one character-one-text" "character-two character-two-text" "character-three character-three-text" "character-four character-four-text" "character-five character-five-text";
+    align-content: center;
+  }
+  .character-one {
+    grid-area: character-one;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-one img {
+    width: 100%;
+  }
+  .character-two {
+    grid-area: character-two;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-two img {
+    width: 100%;
+  }
+  .character-three {
+    grid-area: character-three;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-three img {
+    width: 100%;
+  }
+  .character-four {
+    grid-area: character-four;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-four img {
+    width: 100%;
+  }
+  .character-five {
+    grid-area: character-five;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-five img {
+    width: 100%;
+  }
+  .character-one-text {
+    grid-area: character-one-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-two-text {
+    grid-area: character-two-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-three-text {
+    grid-area: character-three-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-four-text {
+    grid-area: character-four-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-five-text {
+    grid-area: character-five-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-one-text {
+    grid-area: character-one-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-two-text {
+    grid-area: character-two-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-three-text {
+    grid-area: character-three-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-four-text {
+    grid-area: character-four-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-five-text {
+    grid-area: character-five-text;
+    margin: 40px 80px 0px 0px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 100%);
+    margin: 0;
+    grid-template-rows: 0.5fr 0 500px 0.5fr 0 0.5fr;
+    grid-template-areas: "imagen" "texto" "nada" "video" "texto2" "nada2";
+  }
+  .grid-item {
+    width: 90%;
+  }
+  .first-item {
+    grid-area: imagen;
+    width: 100%;
+    height: auto;
+  }
+  .first-item img {
+    width: 100%;
+    height: 100%;
+  }
+  .second-item {
+    grid-area: nada;
+  }
+  .third-item {
+    grid-area: video;
+  }
+  .fourth-item {
+    grid-area: texto;
+  }
+  .fifth-item {
+    grid-area: nada2;
+  }
+  .sixth-item {
+    grid-area: texto2;
+  }
+  .video-trailer {
+    width: 800px;
+    height: 680px;
+    margin-left: 50px;
+  }
+  .video-trailer iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .intro-text h2 {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  .intro-text p {
+    margin-top: 10px;
+    font-size: 10px;
+    margin-right: 50px;
+  }
+  .title-princp {
+    display: flex;
+    justify-content: center;
+  }
+  /* Planets */
+  .grid-container-planets {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 50px;
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas: "image-one" "text-one" "image-two" "text-two" "image-three" "text-three" "image-four" "text-four" "image-five" "text-five" "image-six" "text-six";
+    align-items: center;
+  }
+  .planet-text-one {
+    grid-area: text-one;
+    margin: 0px 80px 0px 80px;
+  }
+  .planet-text-two {
+    grid-area: text-two;
+    margin: 0px 80px 0px 80px;
+  }
+  .planet-text-three {
+    grid-area: text-three;
+    margin: 100px 80px 0px 80px;
+  }
+  .planet-text-four {
+    grid-area: text-four;
+    margin: 100px 80px 0px 80px;
+  }
+  .planet-text-five {
+    grid-area: text-five;
+    margin: 100px 80px 0px 80px;
+  }
+  .planet-text-six {
+    grid-area: text-six;
+    margin: 100px 80px 0px 80px;
+  }
+  .planet-image-one {
+    grid-area: image-one;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-one img {
+    width: 100%;
+  }
+  .planet-image-two {
+    grid-area: image-two;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-two img {
+    width: 100%;
+  }
+  .planet-image-three {
+    grid-area: image-three;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+  .planet-image-three img {
+    width: 100%;
+  }
+  .planet-image-four {
+    grid-area: image-four;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+  .planet-image-four img {
+    width: 100%;
+  }
+  .planet-image-five {
+    grid-area: image-five;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+  .planet-image-five img {
+    width: 100%;
+  }
+  .planet-image-six {
+    grid-area: image-six;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+  .planet-image-six img {
+    width: 100%;
+  }
+  /* Characters */
+  .grid-container-characters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    grid-template-rows: repeat(10, auto);
+    grid-template-areas: "character-one character-one-text" "character-two character-two-text" "character-three character-three-text" "character-four character-four-text" "character-five character-five-text";
+    align-content: center;
+  }
+  .character-one {
+    grid-area: character-one;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-one img {
+    width: 100%;
+  }
+  .character-two {
+    grid-area: character-two;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-two img {
+    width: 100%;
+  }
+  .character-three {
+    grid-area: character-three;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-three img {
+    width: 100%;
+  }
+  .character-four {
+    grid-area: character-four;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-four img {
+    width: 100%;
+  }
+  .character-five {
+    grid-area: character-five;
+    width: 200px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .character-five img {
+    width: 100%;
+  }
+  .character-one-text {
+    grid-area: character-one-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-two-text {
+    grid-area: character-two-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-three-text {
+    grid-area: character-three-text;
+    margin: 40px auto 0px auto;
+  }
+  .character-four-text {
+    grid-area: character-four-text;
+    margin: 40px 80px 0px 0px;
+  }
+  .character-five-text {
+    grid-area: character-five-text;
+    margin: 40px 80px 0px 0px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 100%);
+    margin: 0px;
+    grid-template-areas: "imagen" "texto" "nada" "video" "texto2" "nada2";
+  }
+  .grid-item {
+    width: 90%;
+  }
+  .first-item {
+    grid-area: imagen;
+    width: auto;
+    height: auto;
+  }
+  .first-item img {
+    width: 100%;
+    height: 100%;
+  }
+  .second-item {
+    grid-area: nada;
+  }
+  .third-item {
+    grid-area: video;
+  }
+  .fourth-item {
+    grid-area: texto;
+  }
+  .fifth-item {
+    grid-area: nada2;
+  }
+  .sixth-item {
+    grid-area: texto2;
+  }
+  .video-trailer {
+    width: 187px;
+    height: 338px;
+    margin-left: 20px;
+  }
+  .video-trailer iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .intro-text h2 {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  .intro-text p {
+    margin-top: 10px;
+    font-size: 10px;
+    margin-right: 50px;
+  }
+  .title-princp {
+    display: flex;
+    justify-content: center;
+  }
+  /*Planets */
+  .grid-container-planets {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas: "image-one" "text-one" "image-two" "text-two" "image-three" "text-three" "image-four" "text-four" "image-five" "text-five" "image-six" "text-six";
+    align-items: center;
+  }
+  .planet-text-one {
+    grid-area: text-one;
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  .planet-text-two {
+    grid-area: text-two;
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  .planet-text-three {
+    grid-area: text-three;
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  .planet-text-four {
+    grid-area: text-four;
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  .planet-text-five {
+    grid-area: text-five;
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  .planet-text-six {
+    grid-area: text-six;
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  .planet-image-one {
+    grid-area: image-one;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-one img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-two {
+    grid-area: image-two;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-two img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-three {
+    grid-area: image-three;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-three img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-four {
+    grid-area: image-four;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-four img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-five {
+    grid-area: image-five;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-five img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-six {
+    grid-area: image-six;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .planet-image-six img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*Characters */
+  .grid-container-characters {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    margin: 50px;
+    grid-template-rows: repeat(10, auto);
+    grid-template-areas: "character-one" "character-one-text" "character-two" "character-two-text" "character-three" "character-three-text" "character-four" "character-four-text" "character-five" "character-five-text";
+    align-content: center;
+  }
+  .character-one {
+    grid-area: character-one;
+    width: 200px;
+    margin: auto;
+  }
+  .character-one img {
+    width: 100%;
+  }
+  .character-two {
+    grid-area: character-two;
+    width: 200px;
+    margin: auto;
+  }
+  .character-two img {
+    width: 100%;
+  }
+  .character-three {
+    grid-area: character-three;
+    width: 200px;
+    margin: auto;
+  }
+  .character-three img {
+    width: 100%;
+  }
+  .character-four {
+    grid-area: character-four;
+    width: 200px;
+    margin: auto;
+  }
+  .character-four img {
+    width: 100%;
+  }
+  .character-five {
+    grid-area: character-five;
+    width: 200px;
+    margin: auto;
+  }
+  .character-five img {
+    width: 100%;
+  }
+  .character-one-text {
+    grid-area: character-one-text;
+    margin: 40px auto 0 auto;
+  }
+  .character-two-text {
+    grid-area: character-two-text;
+    margin: 40px auto 0 auto;
+  }
+  .character-three-text {
+    grid-area: character-three-text;
+    margin: 40px auto 0 auto;
+  }
+  .character-four-text {
+    grid-area: character-four-text;
+    margin: 40px auto 0 auto;
+  }
+  .character-five-text {
+    grid-area: character-five-text;
+    margin: 40px auto 0 auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

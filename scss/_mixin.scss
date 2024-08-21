@@ -1,0 +1,31 @@
+
+@mixin grid_layout ($columns, $med, $margin: $margin-default) {
+    display: grid;
+    grid-template-columns: repeat($columns, $med);
+    margin: $margin;
+}
+
+@mixin video-size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin responsive($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin Allin {
+    background-image: url(../images/stars.jpg);
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
